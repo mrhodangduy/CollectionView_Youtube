@@ -14,6 +14,12 @@
 		630A38A81F25E688003C3129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630A38A61F25E688003C3129 /* LaunchScreen.storyboard */; };
 		630A38B01F25E860003C3129 /* Youtube.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630A38AF1F25E860003C3129 /* Youtube.swift */; };
 		630A38B21F25EF39003C3129 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630A38B11F25EF39003C3129 /* MyCollectionViewCell.swift */; };
+		6343A8F41F27372300992F5C /* Taylor Swift - I Knew You Were Trouble.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6343A8EE1F27372300992F5C /* Taylor Swift - I Knew You Were Trouble.mp4 */; };
+		6343A8F51F27372300992F5C /* RIHANNA - Work (Explicit) ft  Drake (Our Version).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6343A8EF1F27372300992F5C /* RIHANNA - Work (Explicit) ft  Drake (Our Version).mp4 */; };
+		6343A8F61F27372300992F5C /* Beyoncé - Single Ladies (Put a Ring on It).mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6343A8F01F27372300992F5C /* Beyoncé - Single Ladies (Put a Ring on It).mp4 */; };
+		6343A8F71F27372300992F5C /* Kanye West's heartless rant against Taylor Swift.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6343A8F11F27372300992F5C /* Kanye West's heartless rant against Taylor Swift.mp4 */; };
+		6343A8F81F27372300992F5C /* Rebecca Black - Friday.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6343A8F21F27372300992F5C /* Rebecca Black - Friday.mp4 */; };
+		6343A8F91F27372300992F5C /* John Legend - All of Me.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 6343A8F31F27372300992F5C /* John Legend - All of Me.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		630A38A91F25E688003C3129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		630A38AF1F25E860003C3129 /* Youtube.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Youtube.swift; sourceTree = "<group>"; };
 		630A38B11F25EF39003C3129 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		6343A8EE1F27372300992F5C /* Taylor Swift - I Knew You Were Trouble.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Taylor Swift - I Knew You Were Trouble.mp4"; sourceTree = "<group>"; };
+		6343A8EF1F27372300992F5C /* RIHANNA - Work (Explicit) ft  Drake (Our Version).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RIHANNA - Work (Explicit) ft  Drake (Our Version).mp4"; sourceTree = "<group>"; };
+		6343A8F01F27372300992F5C /* Beyoncé - Single Ladies (Put a Ring on It).mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Beyoncé - Single Ladies (Put a Ring on It).mp4"; sourceTree = "<group>"; };
+		6343A8F11F27372300992F5C /* Kanye West's heartless rant against Taylor Swift.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kanye West's heartless rant against Taylor Swift.mp4"; sourceTree = "<group>"; };
+		6343A8F21F27372300992F5C /* Rebecca Black - Friday.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rebecca Black - Friday.mp4"; sourceTree = "<group>"; };
+		6343A8F31F27372300992F5C /* John Legend - All of Me.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "John Legend - All of Me.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 		630A389C1F25E687003C3129 /* CollectionViewGetDataJson */ = {
 			isa = PBXGroup;
 			children = (
+				6343A8ED1F2736F800992F5C /* Video */,
 				630A389D1F25E688003C3129 /* AppDelegate.swift */,
 				630A389F1F25E688003C3129 /* ViewController.swift */,
 				630A38A11F25E688003C3129 /* Main.storyboard */,
@@ -68,6 +81,19 @@
 				630A38B11F25EF39003C3129 /* MyCollectionViewCell.swift */,
 			);
 			path = CollectionViewGetDataJson;
+			sourceTree = "<group>";
+		};
+		6343A8ED1F2736F800992F5C /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				6343A8EE1F27372300992F5C /* Taylor Swift - I Knew You Were Trouble.mp4 */,
+				6343A8EF1F27372300992F5C /* RIHANNA - Work (Explicit) ft  Drake (Our Version).mp4 */,
+				6343A8F01F27372300992F5C /* Beyoncé - Single Ladies (Put a Ring on It).mp4 */,
+				6343A8F11F27372300992F5C /* Kanye West's heartless rant against Taylor Swift.mp4 */,
+				6343A8F21F27372300992F5C /* Rebecca Black - Friday.mp4 */,
+				6343A8F31F27372300992F5C /* John Legend - All of Me.mp4 */,
+			);
+			name = Video;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,8 +157,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				630A38A81F25E688003C3129 /* LaunchScreen.storyboard in Resources */,
+				6343A8F41F27372300992F5C /* Taylor Swift - I Knew You Were Trouble.mp4 in Resources */,
+				6343A8F91F27372300992F5C /* John Legend - All of Me.mp4 in Resources */,
 				630A38A51F25E688003C3129 /* Assets.xcassets in Resources */,
 				630A38A31F25E688003C3129 /* Main.storyboard in Resources */,
+				6343A8F61F27372300992F5C /* Beyoncé - Single Ladies (Put a Ring on It).mp4 in Resources */,
+				6343A8F51F27372300992F5C /* RIHANNA - Work (Explicit) ft  Drake (Our Version).mp4 in Resources */,
+				6343A8F71F27372300992F5C /* Kanye West's heartless rant against Taylor Swift.mp4 in Resources */,
+				6343A8F81F27372300992F5C /* Rebecca Black - Friday.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +342,7 @@
 				630A38AE1F25E688003C3129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

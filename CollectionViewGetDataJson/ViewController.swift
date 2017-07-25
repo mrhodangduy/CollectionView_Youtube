@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     var arrayTemp = [Youtube]()
+    var playerViewController:AVPlayerViewController!
+    
+    var arraySong:[String] = ["Taylor Swift - I Knew You Were Trouble","RIHANNA - Work (Explicit) ft  Drake (Our Version)","Beyoncé - Single Ladies (Put a Ring on It)","Kanye West's heartless rant against Taylor Swift","Rebecca Black - Friday","John Legend - All of Me"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        playerViewController = AVPlayerViewController()
+
         
-        print(9%4)
+        
         
         myCollectionView.delegate = self
         myCollectionView.dataSource = self
+        myCollectionView.contentInset = UIEdgeInsets(top: -64, left: 0, bottom: 0, right: 0)
         
         Youtube.loadDataYoutube { (results) in
             for result in results!
             {
-                print(result)
                 self.arrayTemp.append(result)
                 DispatchQueue.main.async {
                     self.myCollectionView.reloadData()
@@ -32,10 +39,11 @@ class ViewController: UIViewController {
             }
             
         }
-        
-        
     }
     
+    func playerDidFinishPlaying(note: NSNotification) {
+        self.playerViewController.dismiss(animated: true)
+    }
 }
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
@@ -51,7 +59,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         let youtubeObject = arrayTemp[indexPath.row]
         let second = (youtubeObject.duration) % 60
         let minute = (youtubeObject.duration - second) / 60
-       
+        
         cell.profile_image_name.layer.cornerRadius = cell.profile_image_name.frame.size.height / 2
         
         cell.thumbnail_image_name.loadImage(imagelink: youtubeObject.thumbnail_image_name)
@@ -59,7 +67,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cell.profile_image_name.loadImage(imagelink: youtubeObject.channel["profile_image_name"] as! String)
         cell.nameandNumberofView.text = "\(youtubeObject.channel["name"] as! String) channel      \(youtubeObject.number_of_views) views"
         
-        if second > 10
+        if second > 9
         {
             cell.duration.text = "\(minute):\(second)"
         }
@@ -74,5 +82,18 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width, height: 310)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let path = Bundle.main.path(forResource: arraySong[indexPath.row], ofType: "mp4")
+        let url = URL(fileURLWithPath: path!)
+        playerViewController.player = AVPlayer(url: url)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.playerDidFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerViewController.player?.currentItem)
+        present(playerViewController, animated: true) {
+            self.playerViewController.player?.play()
+        }
+
+    }
+    
     
 }

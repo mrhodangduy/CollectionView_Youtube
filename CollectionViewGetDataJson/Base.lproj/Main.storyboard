@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="sOq-Cr-BTm">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -21,16 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z3K-j1-TzN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                <color key="backgroundColor" red="0.9295910597" green="0.17073315380000001" blue="0.13528192040000001" alpha="0.98239511989999995" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2yz-hh-xbr">
-                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="617" id="2yI-5G-7ug"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="NzN-dn-pcT">
                                     <size key="itemSize" width="375" height="311"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -118,21 +111,36 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2yz-hh-xbr" secondAttribute="trailing" id="ImV-Ja-vcB"/>
-                            <constraint firstItem="2yz-hh-xbr" firstAttribute="top" secondItem="z3K-j1-TzN" secondAttribute="bottom" id="Kp4-BW-dPS"/>
-                            <constraint firstItem="z3K-j1-TzN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Vz2-dM-Z7z"/>
-                            <constraint firstAttribute="trailing" secondItem="z3K-j1-TzN" secondAttribute="trailing" id="bUE-jF-BST"/>
-                            <constraint firstItem="2yz-hh-xbr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gYf-ec-UBX"/>
-                            <constraint firstItem="z3K-j1-TzN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iv5-jm-UUJ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2yz-hh-xbr" secondAttribute="bottom" id="mXv-NS-BmV"/>
-                            <constraint firstItem="2yz-hh-xbr" firstAttribute="top" secondItem="z3K-j1-TzN" secondAttribute="bottom" id="mhY-WF-wic"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2yz-hh-xbr" secondAttribute="bottom" id="9Jw-pg-nNc"/>
+                            <constraint firstItem="2yz-hh-xbr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DQc-Cf-LpR"/>
+                            <constraint firstAttribute="trailing" secondItem="2yz-hh-xbr" secondAttribute="trailing" id="DZg-zl-UAx"/>
+                            <constraint firstItem="2yz-hh-xbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rVc-sk-c0J"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wBQ-yi-iHU"/>
                     <connections>
                         <outlet property="myCollectionView" destination="2yz-hh-xbr" id="fjR-TV-deA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.2" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mr0-Zc-kIc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sOq-Cr-BTm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nYv-Tw-9fW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="syn-qk-bIV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGx-ny-oqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="116" y="122.78860569715144"/>
         </scene>
