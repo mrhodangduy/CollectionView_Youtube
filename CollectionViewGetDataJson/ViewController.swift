@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         playerViewController = AVPlayerViewController()
 
-        
+        navigationItem.title = "Home"
         
         
         myCollectionView.delegate = self
